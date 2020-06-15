@@ -246,15 +246,13 @@ body {
   }
 }
 #glitch:before {
-  /* content: "< " + attr(data-text);
-  position: absolute; */
   position: absolute;
   left: -2px;
   text-shadow: 1px 0 rgb(237, 255, 156);
   top: 0;
   background: black;
   overflow: hidden;
-  /* clip: rect(0, 900px, 0, 0); */
+  clip: rect(0, 900px, 0, 0);
   animation: noise-anim-2 3s infinite linear alternate-reverse;
 }
 

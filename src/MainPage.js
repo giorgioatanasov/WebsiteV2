@@ -4,8 +4,6 @@ import { navSlide, openCity } from "./htmlApp.js";
 import { Helmet } from "react-helmet";
 import { Folder } from "./Folder.js";
 
-const TITLE = "Giorgio Atanasov | Software Engineer";
-
 class MainPage extends Component {
   componentDidMount() {
     navSlide();
@@ -15,9 +13,6 @@ class MainPage extends Component {
   render() {
     return (
       <html Long="en">
-        <Helmet>
-          <title>{TITLE}</title>
-        </Helmet>
         <link rel="stylesheet" href="./style.css"></link>
         <link
           href="https://fonts.googleapis.com/css?family=Source+Sans+Pro"

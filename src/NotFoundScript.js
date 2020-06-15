@@ -15,13 +15,11 @@ function NotFoundScript() {
 
   $(".four-oh-four-form").on("submit", function (e) {
     e.preventDefault();
-    var val = $(this).children($(".404-input")).val().toLowerCase();
-    var href;
-    resetForm();
+    resetForm(0);
   });
 }
 
-function resetForm(val) {
+function resetForm(firstRun) {
   var input = $(".404-input");
   var parsedInput = input
     .val()
@@ -29,10 +27,10 @@ function resetForm(val) {
     .filter(function (e) {
       return e.trim().length > 0;
     });
-  console.log(parsedInput);
   var message = "-bash: " + input.val() + ": command not found";
+  if (firstRun === 1) message = "";
 
-  if (parsedInput.length == 1 && parsedInput[0] == "clear") {
+  if (parsedInput.length === 1 && parsedInput[0] === "clear") {
     message = "";
     var clear = true;
     $(".terminal").children("img").remove();
@@ -45,7 +43,7 @@ function resetForm(val) {
     );
   }
 
-  if (parsedInput.length == 1 && parsedInput[0] == "ls") {
+  if (parsedInput.length === 1 && parsedInput[0] === "ls") {
     message = "resume    Home";
     $("terminal").append(
       '<p class="prompt">' +
@@ -54,44 +52,48 @@ function resetForm(val) {
     );
   }
 
+  // if (
+  //   parsedInput.length === 2 &&
+  //   parsedInput[0] === "cd" &&
+  //   parsedInput[1].toLowerCase() === "resume"
+  // ) {
+  //   message = "You will be redirected to resume in 3 seconds";
+  //   var resume = true;
+  // }
+
   if (
-    parsedInput.length == 2 &&
-    parsedInput[0] == "cd" &&
-    parsedInput[1].toLowerCase() == "resume"
+    parsedInput.length === 2 &&
+    parsedInput[0] === "cd" &&
+    parsedInput[1].toLowerCase() === "resume"
   ) {
     message = "You will be redirected to resume in 3 seconds";
     var resume = true;
   }
 
   if (
-    parsedInput.length == 2 &&
-    parsedInput[0] == "cd" &&
-    parsedInput[1].toLowerCase() == "resume"
+    (parsedInput.length === 2 &&
+      parsedInput[0] === "cd" &&
+      parsedInput[1].toLowerCase() === "home") ||
+    (parsedInput.length === 1 && parsedInput[0].toLowerCase() === "exit")
   ) {
-    message = "You will be redirected to resume in 3 seconds";
-    var resume = true;
-  }
-
-  if (
-    (parsedInput.length == 2 &&
-      parsedInput[0] == "cd" &&
-      parsedInput[1].toLowerCase() == "home") ||
-    (parsedInput.length == 1 && parsedInput[0].toLowerCase() == "exit")
-  ) {
-    message = "You will be directed to home in 3 seconds";
+    message = "You will be redirected to home in 3 seconds";
     var home = true;
   }
 
   $(".new-output").removeClass("new-output");
   input.val("");
+
   $(".terminal").append(
-    '<p class="prompt">' +
-      message +
-      '</p><p class="prompt output new-output"></p>'
+    firstRun !== 1
+      ? '<p class="prompt">' +
+          message +
+          '</p><p class="prompt output new-output"></p>'
+      : '</p><p class="prompt output new-output"></p>'
   );
+
   if (clear) {
     errMsg();
-    resetForm(true);
+    resetForm(1);
     clear = false;
   } else if (resume) {
     setTimeout(function () {
@@ -106,7 +108,6 @@ function resetForm(val) {
 }
 
 function errMsg() {
-  console.log("Inside err msg.");
   $(".terminal").append(
     "<div class='errorMessage'>" +
       "<p class='prompt' style='color:white' id='glitch' data-text='&lt;!DOCTYPE html&gt'>&lt;!DOCTYPE html&gt</p>" +

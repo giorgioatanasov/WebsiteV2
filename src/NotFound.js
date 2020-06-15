@@ -5,19 +5,15 @@ import { NotFoundScript, errMsg, resetForm } from "./NotFoundScript.js";
 class NotFound extends Component {
   componentDidMount() {
     NotFoundScript();
-    console.log("In component did mount");
     errMsg();
-    resetForm(true);
+    resetForm(1);
   }
 
   render() {
     return (
       <html lang="en">
-        <head>
-          <meta charset="UTF-8"></meta>
-          <link rel="stylesheet" href="./notFound.css"></link>
-        </head>
-
+        <meta charset="UTF-8"></meta>
+        <link rel="stylesheet" href="./NotFound.css"></link>
         <body>
           <div class="container">
             <form class="four-oh-four-form">
