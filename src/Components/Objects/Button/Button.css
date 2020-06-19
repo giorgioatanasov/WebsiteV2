@@ -1,0 +1,58 @@
+button:focus {
+  outline: 0;
+}
+.buttons {
+  text-align: center;
+  transform: translate(0%, 0%);
+}
+.buttons {
+  background: none;
+  color: #ccc;
+  display: inline-block;
+  border: 1px solid #55d98a;
+  font-size: 18px;
+  border-radius: 4px;
+  overflow: hidden;
+  padding: 5.5px 23px;
+}
+.buttons:focus {
+  outline: none;
+}
+.buttons:before {
+  text-align: center;
+  content: "";
+  display: block;
+  position: absolute;
+  background: rgba(255, 255, 255, 0.5);
+  width: 60px;
+  height: 100%;
+  left: 0;
+  top: 0;
+  opacity: 0.5s;
+  filter: blur(30px);
+  transform: translateX(-130px) skewX(-15deg);
+}
+.buttons:after {
+  content: "";
+  display: block;
+  position: absolute;
+  background: rgba(255, 255, 255, 0.2);
+  width: 30px;
+  height: 100%;
+  left: 30px;
+  top: 0;
+  opacity: 0;
+  filter: blur(30px);
+  transform: translate(-100px) scaleX(-15deg);
+}
+.buttons:hover {
+  background: #55d98a;
+}
+.buttons:hover:before {
+  transform: translateX(300px) skewX(-15deg);
+  opacity: 0.6;
+}
+.buttons:hover:after {
+  transform: translateX(300px) skewX(-15deg);
+  opacity: 1;
+}

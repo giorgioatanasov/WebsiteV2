@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import $ from "jquery";
-import { NotFoundScript, errMsg, resetForm } from "./NotFoundScript.js";
+import { NotFoundScript, errMsg, resetForm } from "./404Script.js";
+import "./404.css";
 
 class NotFound extends Component {
   componentDidMount() {
@@ -20,13 +21,6 @@ class NotFound extends Component {
               <input type="text" class="404-input"></input>
             </form>
             <div class="terminal">
-              {/* <p
-                class="prompt"
-                id="glitch"
-                data-text="> 404 The Page Was Not Found"
-              >
-                > 404 The Page Was Not Found
-              </p> */}
               <p class="prompt output new-output"></p>
             </div>{" "}
           </div>

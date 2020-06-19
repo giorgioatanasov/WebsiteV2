@@ -1,0 +1,67 @@
+.folder {
+  width: 44px;
+  height: auto;
+  position: relative;
+  display: flex;
+  bottom: 50%;
+}
+
+.tableGithub {
+  position: absolute;
+  margin: -98px 0 0 155px;
+}
+
+.fa-github,
+.fa-external-link {
+  color: #ccd7f4;
+}
+.fa-github {
+  padding: 10px 14px;
+  font-size: 21px;
+}
+.fa-github:hover,
+.fa-external-link:hover {
+  color: #55d98a;
+}
+
+#githubCss {
+  padding: 0;
+  position: relative;
+  right: 260%;
+
+  color: #8893ae;
+  font-size: 28px;
+}
+#githubCss:hover {
+  color: #55d98a;
+}
+
+.info {
+  font-family: "Apercu Bold", sans-serif;
+  color: #ccd7f4;
+  font-family: "Apercu Bold", sans-serif;
+  font-size: 18px;
+  font-weight: 560;
+  position: relative;
+  bottom: 50%;
+  right: 10%;
+}
+
+.description {
+  color: #a8b3cf;
+  font-family: "Apercu", sans-serif;
+  text-align: left;
+  font-size: 14px;
+  line-height: 1.4;
+  position: relative;
+  bottom: 25%;
+}
+
+.components {
+  color: #a8b3cf;
+  font-family: "Space Mono", sans-serif;
+  font-size: 12px;
+  bottom: 10%;
+  display: flex;
+  position: relative;
+}

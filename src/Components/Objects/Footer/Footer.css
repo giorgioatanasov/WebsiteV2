@@ -1,0 +1,69 @@
+.left-footer {
+  width: 350px;
+  display: block;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.social-icon {
+  color: #fff;
+}
+
+.social-icons li {
+  vertical-align: middle;
+  line-height: 60px;
+}
+
+.social-icons a {
+  color: #a8b3cf;
+  text-decoration: none;
+}
+
+.fa-linkedin {
+  padding: 10px 14px;
+  font-size: 21px;
+}
+
+.fa-linkedin:hover {
+  color: #55d98a;
+}
+
+.right-footer {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+}
+
+.rightFooter {
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  transform: rotate(90deg);
+  color: #a8b3cf;
+  font-size: 13px;
+  font-family: "Space Mono", sans-serif;
+  font-weight: 0;
+  font-weight: 300;
+  margin: 100% 40%;
+  margin-right: 23%;
+  cursor: pointer;
+}
+
+.rightFooter:hover {
+  color: #55d98a;
+  margin-bottom: 125px;
+}
+
+.vl,
+.v2 {
+  border-left: 1px solid #a8b3cf;
+  height: 120px;
+  margin: 13px 0 0 52px;
+}
+
+.v2 {
+  margin: 70px 0 0 105px;
+}
