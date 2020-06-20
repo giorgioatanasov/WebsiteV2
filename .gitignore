@@ -22,5 +22,5 @@ yarn-error.log*
 
 
 # Firebase Hosting
-firebase
+/firebase
 firebase-debug.log
