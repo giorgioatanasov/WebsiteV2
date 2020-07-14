@@ -18,10 +18,11 @@ class MainPage extends Component {
         <NavBar />
         <body>
           <div class="header">
-            <h1 class="greating">Hi, my name is</h1>
+            <h1 class="greating">Hello, I am</h1>
             <h2 class="name">Giorgio Atanasov</h2>
-            <h3 id="glitch" data-text="I build web applications.">
-              I build web applications.
+            <h3 id="glitch">
+              {/* <h3 id="glitch" data-text="I engineer web applications."> */}I
+              engineer web applications.
             </h3>
             <h3 class="intro">
               I'm a software engineer based in Fremont, CA specializing in
@@ -30,7 +31,7 @@ class MainPage extends Component {
             </h3>
             <Button
               {...{
-                text: "Get In Touch",
+                text: "Send a Note",
                 id: "in-touch",
                 onClick: () =>
                   (window.location = "mailto:giorgioatanasov34@yahoo.com"),
@@ -68,8 +69,8 @@ class MainPage extends Component {
                   </p>
                 </div>
               </li>
-              <li class="workExperience" id="noBottomMargin">
-                <span class="listTitle"> Where I've Worked</span>
+              <li id="noBottomMargin">
+                <span class="listTitle"> Work Experience</span>
               </li>
             </ul>
 
@@ -80,7 +81,7 @@ class MainPage extends Component {
                 <span class="listTitle"> UCI SubLeasing Project</span>
                 <div class="projInfo">
                   <img class="projImage" src="./Images/OnTheHouse.png"></img>
-                  <div>
+                  <div class="projectInformation">
                     <h1 class="featureProj">Featured Project</h1>
                     <h2 class="projName">UCI Housing</h2>
                     <p class="projDescription">
@@ -154,7 +155,7 @@ class MainPage extends Component {
             </ol>
           </div>
 
-          <ol start="5" class="projects">
+          <ol start="5" class="projects" id="otherProjects">
             <li>
               <span class="listTitle">Other Projects</span>
             </li>

@@ -1,3 +1,6 @@
+.folderContainer {
+  width: 100%;
+}
 .folder {
   width: 44px;
   height: auto;
@@ -27,7 +30,7 @@
 #githubCss {
   padding: 0;
   position: relative;
-  right: 260%;
+  right: 280%;
 
   color: #8893ae;
   font-size: 28px;
